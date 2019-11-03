@@ -1,27 +1,14 @@
 {
-  "name": "InjectIt",
-  "version": "0.0.1",
   "manifest_version": 2,
-  "description": "Injecting stuff",
-  "background": {
-    "scripts": [
-      "background.js"
-    ],
-    "persistent": false
-  },
-  "browser_action": {
-    "default_title": "Inject!"
-  },
-  "permissions": [
-    "https://*/*",
-    "http://*/*",
-    "tabs"
-  ]
-  "content_scripts": [
-    {
-      "matches": ["http://test-website.com/*"], 
-      "js": ["js/content-script.js"],
-      "css" : ["yourcss.css"]
-    }
-],
+ 
+  "name": "Modify CSS and HTML",
+  "version": "0.1.0",
+  "description": "Lateral blog post demo extension",
+ 
+  "content_scripts": [{
+    "css": ["styles.css"],
+    "js": ["content.js"],
+    "matches": ["https://*/*"]
+  }]
+ 
 }
