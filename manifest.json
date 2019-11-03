@@ -17,4 +17,11 @@
     "http://*/*",
     "tabs"
   ]
+  "content_scripts": [
+    {
+      "matches": ["http://test-website.com/*"], 
+      "js": ["js/content-script.js"],
+      "css" : ["yourcss.css"]
+    }
+],
 }
